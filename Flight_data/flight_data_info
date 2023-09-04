@@ -1,0 +1,28 @@
+Requirements: 
+    • python >= 3.7
+    • pandas >= 1.2.4
+
+Question 1
+The aim of question 1 is to check if all “data scientist daily tasks” are mastered, from processing raw data to model building.
+Simulated flight signals representing fuel flow (in pound per second), altitude (in feet), wind (in knots) and speed (in km/h) are stored in the question1 folder of the archive in DataFrame format. Each Dataframe stores signals in the following structure:
+    1. indexes: time vector
+    2. columns: number of flights
+Dataframes can be read with pickle reader method, for example:
+output = pd.read_pickle("signals_altitude.pkl")
+
+Note that time vector can be different from one flight number to another.
+
+Write a script or a notebook which contains all the step to answer below questions. 
+    1) Explain the data processing steps to select the best features and prepare them for the learning phase.
+
+    2) Build a fuel flow model as a function of:
+        a. effective speed range of data
+        b. constant altitude of 8000 ft
+        c. why not wind speed?
+
+    3) Build fuel flow model as a function of:
+        a.  [0-15000] ft altitude range
+        b. constant speed of 665 km/h
+        c. why not wind speed?
+
+    4) Bonus question: Build fuel flow model as a function of speed and altitude on the effective range of data
